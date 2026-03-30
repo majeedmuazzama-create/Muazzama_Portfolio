@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muazzama Majeed | B2B Sales & Outreach Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #0d9488;
+    --teal-light: #14b8a6;
+    --teal-dark: #0f766e;
+    --cream: #fafaf7;
+    --dark: #0f1923;
+    --mid: #1e2d3d;
+    --text: #2d3748;
+    --muted: #718096;
+    --border: #e2e8f0;
+    --accent: #f59e0b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: rgba(250,250,247,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--dark);
+    letter-spacing: -0.02em;
+  }
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--muted);
+    transition: color 0.2s;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .nav-links a:hover { color: var(--teal); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    padding: 8rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(13,148,136,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -10%; left: -5%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-content { max-width: 800px; position: relative; z-index: 1; }
+  .hero-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--teal-light);
+    border: 1px solid rgba(20,184,166,0.3);
+    padding: 0.4rem 0.9rem;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 span { color: var(--teal-light); }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    max-width: 560px;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+  .hero-stats {
+    display: flex; gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  .stat-item { }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+  .stat-num span { color: var(--teal-light); }
+  .stat-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 0.3rem;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--teal);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .hero-cta:hover { background: var(--teal-dark); transform: translateY(-1px); }
+
+  /* SECTIONS */
+  section { padding: 6rem 4rem; }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.8rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .section-desc {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 3.5rem;
+  }
+
+  /* ABOUT */
+  .about { background: #fff; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 1.2rem;
+  }
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+  .skill-tag {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    padding: 0.45rem 1rem;
+    border-radius: 100px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .about-highlights { }
+  .highlight-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .highlight-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--teal);
+  }
+  .highlight-card h4 {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--dark);
+    margin-bottom: 0.4rem;
+  }
+  .highlight-card p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* CASE STUDY */
+  .case-study { background: var(--cream); }
+  .case-card {
+    background: var(--dark);
+    border-radius: 16px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .case-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--teal), var(--accent));
+  }
+  .case-tag {
+    display: inline-block;
+    background: rgba(13,148,136,0.15);
+    border: 1px solid rgba(13,148,136,0.3);
+    color: var(--teal-light);
+    font-size: 0.72rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 100px;
+    font-family: 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.2rem;
+  }
+  .case-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.02em;
+  }
+  .case-card p {
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .case-results {
+    display: flex; gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .result-item {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+  .result-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--teal-light);
+    display: block;
+  }
+  .result-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.2rem;
+  }
+
+  /* EMAIL SAMPLES */
+  .emails { background: #fff; }
+  .email-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  .email-header {
+    background: var(--cream);
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .email-meta { }
+  .email-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .email-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--dark);
+    margin-top: 0.2rem;
+  }
+  .email-badge {
+    background: var(--teal);
+    color: #fff;
+    font-size: 0.72rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 100px;
+    font-weight: 500;
+  }
+  .email-subject {
+    padding: 1rem 1.5rem;
+    background: rgba(13,148,136,0.04);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+  }
+  .email-subject strong { color: var(--dark); }
+  .email-subject span { color: var(--muted); }
+  .email-body {
+    padding: 1.5rem;
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: var(--text);
+    white-space: pre-line;
+  }
+  .email-analysis {
+    padding: 1.2rem 1.5rem;
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+  }
+  .email-analysis h5 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+    font-family: 'DM Mono', monospace;
+  }
+  .analysis-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .analysis-tag {
+    background: rgba(13,148,136,0.08);
+    border: 1px solid rgba(13,148,136,0.2);
+    color: var(--teal-dark);
+    font-size: 0.78rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
+  /* UPWORK PROFILES */
+  .profiles { background: var(--cream); }
+  .profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .profile-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.8rem;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .profile-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  }
+  .profile-card.featured {
+    border-color: var(--teal);
+  }
+  .profile-badge {
+    position: absolute;
+    top: 1.2rem; right: 1.2rem;
+    background: var(--teal);
+    color: #fff;
+    font-size: 0.68rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 100px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .profile-badge.new {
+    background: var(--accent);
+    color: #fff;
+  }
+  .profile-niche {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.6rem;
+  }
+  .profile-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.4rem;
+  }
+  .profile-title {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+  }
+  .profile-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .profile-stat {
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 0.7rem;
+    text-align: center;
+  }
+  .profile-stat-num {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--dark);
+    display: block;
+  }
+  .profile-stat-label {
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-top: 0.1rem;
+  }
+  .profile-role {
+    font-size: 0.82rem;
+    color: var(--text);
+    line-height: 1.6;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  .profile-role strong { color: var(--teal-dark); }
+
+  /* PHILOSOPHY */
+  .philosophy { background: var(--dark); }
+  .philosophy .section-title { color: #fff; }
+  .philosophy .section-desc { color: rgba(255,255,255,0.5); }
+  .philosophy .section-label { color: var(--teal-light); }
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .principle-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: border-color 0.2s;
+  }
+  .principle-card:hover {
+    border-color: rgba(13,148,136,0.4);
+  }
+  .principle-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--teal-light);
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+  }
+  .principle-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.7rem;
+  }
+  .principle-card p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+  }
+
+  /* LINKEDIN WORK */
+  .linkedin-work { background: #fff; }
+  .linkedin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .linkedin-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .linkedin-card-header {
+    background: var(--dark);
+    padding: 1.5rem;
+    position: relative;
+  }
+  .linkedin-card-header h4 {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  .linkedin-card-header p {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.82rem;
+  }
+  .linkedin-card-body {
+    padding: 1.5rem;
+  }
+  .linkedin-item {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .linkedin-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .linkedin-dot {
+    width: 6px; height: 6px;
+    background: var(--teal);
+    border-radius: 50%;
+    margin-top: 0.45rem;
+    flex-shrink: 0;
+  }
+  .linkedin-item p {
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .linkedin-item strong { color: var(--dark); }
+
+  /* CONTACT */
+  .contact {
+    background: var(--teal-dark);
+    text-align: center;
+    padding: 6rem 4rem;
+  }
+  .contact .section-label { color: rgba(255,255,255,0.6); }
+  .contact .section-title { color: #fff; max-width: 600px; margin: 0 auto 1rem; }
+  .contact .section-desc { color: rgba(255,255,255,0.7); margin: 0 auto 2.5rem; }
+  .contact-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .contact-btn.primary {
+    background: #fff;
+    color: var(--teal-dark);
+  }
+  .contact-btn.primary:hover { background: var(--cream); }
+  .contact-btn.secondary {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.4);
+  }
+  .contact-btn.secondary:hover { border-color: #fff; }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0 4rem;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-content > * {
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+  .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+  .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+  .hero-content > *:nth-child(5) { animation-delay: 0.5s; }
+
+  @media (max-width: 900px) {
+    section { padding: 4rem 2rem; }
+    .hero { padding: 7rem 2rem 4rem; }
+    .about-grid, .profiles-grid, .principles-grid, .linkedin-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Muazzama Majeed</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#case-study">Case Studies</a></li>
+    <li><a href="#emails">Email Samples</a></li>
+    <li><a href="#profiles">Upwork Work</a></li>
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">B2B Sales & Outreach Portfolio</div>
+    <h1>I don't just send emails.<br><span>I close deals.</span></h1>
+    <p class="hero-sub">3+ years building outreach systems that generate replies, book calls, and convert leads, across cold email, LinkedIn, Upwork, and beyond.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">40<span>%</span></div>
+        <div class="stat-label">Conversion Rate Increase</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Upwork Profiles Managed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">$150<span>K+</span></div>
+        <div class="stat-label">Combined Client Earnings</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">US<span>/UK/EU</span></div>
+        <div class="stat-label">Markets Covered</div>
+      </div>
+    </div>
+    <a href="#case-study" class="hero-cta">View My Work ↓</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-label">Who I Am</div>
+  <div class="section-title">Outreach strategist.<br>Pipeline builder.</div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm Muazzama, a B2B Sales & Business Development professional based in Lahore, Pakistan. I specialize in building outreach systems that actually work: cold email sequences, LinkedIn campaigns, Upwork proposal strategy, and persuasion-based copywriting.</p>
+      <p>What separates me from most outreach professionals is that I understand the <em>psychology</em> behind why people respond. Every email I write is built on principles of reciprocity, social proof, value-first communication, and precise CTAs.</p>
+      <p>I've applied these frameworks across IT, eCommerce, and services sectors, helping clients in the US, UK, and EU markets generate consistent pipelines and long-term revenue.</p>
+      <div class="skills-grid">
+        <span class="skill-tag">Cold Email Outreach</span>
+        <span class="skill-tag">B2B Lead Generation</span>
+        <span class="skill-tag">LinkedIn Outreach</span>
+        <span class="skill-tag">Persuasion Copywriting</span>
+        <span class="skill-tag">HubSpot CRM</span>
+        <span class="skill-tag">Proposal Writing</span>
+        <span class="skill-tag">Sales Funnel Strategy</span>
+        <span class="skill-tag">Video DM / Loom</span>
+        <span class="skill-tag">Upwork Profile Optimization</span>
+        <span class="skill-tag">Amazon PPC Outreach</span>
+        <span class="skill-tag">Follow-Up Sequencing</span>
+        <span class="skill-tag">Closing Frameworks</span>
+      </div>
+    </div>
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <h4>🎓 BS E-Commerce, University of Punjab</h4>
+        <p>Hailey College of Commerce, Lahore. Expected graduation 2026. Studying while actively working in the field.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>💼 Co-Founded Grownexus, Amazon PPC Agency</h4>
+        <p>Handling all front-end client acquisition, outreach strategy, and partnership coordination. Partner handles technical PPC delivery.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>📚 Self-Directed Sales Education</h4>
+        <p>Completed Udemy courses in Advanced Upwork Proposals, Presentation Design, Freelance Writing & PowerPoint. Studied frameworks from Cialdini, Alex Hormozi, Jon Buchan, and more.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>🌍 International Client Experience</h4>
+        <p>Built and managed client relationships across US, UK, and EU markets through Fiverr, Upwork, Guru, and direct LinkedIn outreach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CASE STUDIES -->
+<section class="case-study" id="case-study">
+  <div class="section-label">Proof of Work</div>
+  <div class="section-title">Real results.<br>Real clients.</div>
+  <p class="section-desc">These aren't hypotheticals. These are outreach sequences I ran, deals I closed, and profiles I built. Real outcomes..</p>
+
+  <div class="case-card">
+    <div class="case-tag">Case Study 01 / Upwork Follow-Up</div>
+    <h3>How a 3-Touch Follow-Up Sequence Closed a $1,000 Deal</h3>
+    <p>A proposal on Upwork sat unanswered for over a week. Instead of giving up or sending a generic nudge, I ran a deliberate 3-touch follow-up sequence. The second follow-up didn't just check in. It delivered a specific, value-first insight about mobile-first Amazon image hierarchy that was directly relevant to the client's project. The client re-engaged immediately with urgency and the deal closed the same day.</p>
+    <div class="case-results">
+      <div class="result-item">
+        <span class="result-num">10 days</span>
+        <span class="result-label">Stalled Lead Duration</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">3</span>
+        <span class="result-label">Follow-Up Touches</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">$1,000</span>
+        <span class="result-label">Deal Closed</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">Long-term</span>
+        <span class="result-label">Collaboration Offered</span>
+      </div>
+    </div>
+    <p style="font-size:0.85rem; color:rgba(255,255,255,0.4)"><strong style="color:rgba(255,255,255,0.7)">Why it worked:</strong> Follow-up #2 wasn't a reminder. It was a free insight. The client saw expertise, not desperation. This is the difference between following up and following up with value.</p>
+  </div>
+
+  <div class="case-card">
+    <div class="case-tag">Case Study 02 / Upwork Profile Management</div>
+    <h3>Managing Outreach for 3 Active Upwork Profiles Simultaneously</h3>
+    <p>I currently run front-end outreach, proposal writing, and client communication strategy for three active Upwork freelancers in the Amazon ecosystem. Each profile has a distinct niche, voice, and targeting strategy, all managed in parallel with consistent pipeline activity.</p>
+    <div class="case-results">
+      <div class="result-item">
+        <span class="result-num">$100K+</span>
+        <span class="result-label">Asad N. Total Earnings</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">$50K+</span>
+        <span class="result-label">Ramzan M. Total Earnings</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">Top Rated+</span>
+        <span class="result-label">Status Achieved</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">3 months</span>
+        <span class="result-label">Melisa's Profile Age</span>
+      </div>
+    </div>
+    <p style="font-size:0.85rem; color:rgba(255,255,255,0.4)"><strong style="color:rgba(255,255,255,0.7)">What this demonstrates:</strong> The ability to run multiple outreach pipelines simultaneously, adapt tone and strategy per niche, and manage client relationships under pressure and deadlines.</p>
+  </div>
+
+  <div class="case-card">
+    <div class="case-tag">Case Study 03 / Grownexus Agency</div>
+    <h3>Building a LinkedIn-First Outreach System for an Amazon PPC Agency</h3>
+    <p>Co-founded Grownexus, an Amazon PPC agency, and built the entire client-facing acquisition infrastructure from scratch. This included LinkedIn profile positioning, banner copywriting, proof-based credibility stats, cold email sequences targeting Amazon brand owners, and email signature variants optimized for cold and follow-up contexts. Core positioning: helping Amazon brands stop bleeding ad spend and scale profitably.</p>
+    <div class="case-results">
+      <div class="result-item">
+        <span class="result-num">From 0</span>
+        <span class="result-label">Agency Built</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">LinkedIn</span>
+        <span class="result-label">Primary Channel</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">Cold Email</span>
+        <span class="result-label">+ Follow-Up System</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">Amazon</span>
+        <span class="result-label">Brand Owner Niche</span>
+      </div>
+    </div>
+    <p style="font-size:0.85rem; color:rgba(255,255,255,0.4)"><strong style="color:rgba(255,255,255,0.7)">Scope of work:</strong> LinkedIn profile copy, banner specs & messaging, cold email sequences, objection handling scripts, email signatures, and outreach calendar planning.</p>
+  </div>
+</section>
+
+<!-- EMAIL SAMPLES -->
+<section class="emails" id="emails">
+  <div class="section-label">Cold Email Samples</div>
+  <div class="section-title">Emails I write for<br>my clients.</div>
+  <p class="section-desc">These are real outreach emails I write on behalf of the freelancers and agency I manage. Each one targets a specific niche, uses a different persuasion angle, and is built to get a reply from a cold prospect.</p>
+
+  <!-- EMAIL 1 -->
+  <div class="email-card">
+    <div class="email-header">
+      <div class="email-meta">
+        <div class="email-label">Sample 01 / Written for Asad N.</div>
+        <div class="email-title">Targeting: Amazon Brand Owner needing PPC management</div>
+      </div>
+      <div class="email-badge">Amazon FBA Outreach</div>
+    </div>
+    <div class="email-subject">
+      <strong>Subject:</strong> <span>quick question about [Brand]'s ad spend</span>
+    </div>
+    <div class="email-body">Hi [Name],
+
+I came across [Brand Name] while browsing your category on Amazon. Strong product, solid reviews.
+
+One thing I noticed: your Sponsored Products ads are likely showing for broad match keywords that eat budget without converting. It's one of the most common issues in your niche and usually fixable within the first 30 days.
+
+Asad has managed Amazon PPC for 52+ brands with a 100% job success rate on Upwork, specializing in cutting wasted spend while protecting sales volume.
+
+Would it be worth a 15-minute call this week to look at your current campaign structure? No pitch, just a look at whether there's an obvious win.
+
+Best,
+Muazzama
+On behalf of Asad Niaz | Amazon FBA & PPC Specialist</div>
+    <div class="email-analysis">
+      <h5>Techniques Used</h5>
+      <div class="analysis-tags">
+        <span class="analysis-tag">Specific pain point (broad match bleed)</span>
+        <span class="analysis-tag">Social proof (52 brands, 100% JSS)</span>
+        <span class="analysis-tag">Low-stakes CTA ("no pitch")</span>
+        <span class="analysis-tag">Compliment before critique</span>
+        <span class="analysis-tag">Urgency without pressure</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMAIL 2 -->
+  <div class="email-card">
+    <div class="email-header">
+      <div class="email-meta">
+        <div class="email-label">Sample 02 / Written for Ramzan M.</div>
+        <div class="email-title">Targeting: Amazon seller with weak listing visuals</div>
+      </div>
+      <div class="email-badge">Amazon Design Outreach</div>
+    </div>
+    <div class="email-subject">
+      <strong>Subject:</strong> <span>your listing images on mobile</span>
+    </div>
+    <div class="email-body">Hi [Name],
+
+I was checking out [Brand Name]'s listing and the product itself looks great. The images, though, are doing it a disservice.
+
+On mobile (where most Amazon buyers browse), your first 2-3 frames aren't structured to communicate the key benefit before the scroll. The infographic hierarchy is working against you.
+
+Ramzan is an Amazon graphic designer with 210+ completed projects and $50K+ earned on Upwork. He specializes in A+ content and listing images that actually convert, not just look nice.
+
+I could have him put together one sample frame for your hero image so you can see the difference before committing to anything. Interested?
+
+Best,
+Muazzama
+On behalf of Ramzan Muhammad | Amazon Graphic Designer</div>
+    <div class="email-analysis">
+      <h5>Techniques Used</h5>
+      <div class="analysis-tags">
+        <span class="analysis-tag">Compliment + specific critique</span>
+        <span class="analysis-tag">Mobile-first insight (free value)</span>
+        <span class="analysis-tag">Proof-based credibility (210 jobs)</span>
+        <span class="analysis-tag">Free sample offer (reciprocity)</span>
+        <span class="analysis-tag">Soft yes/no close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMAIL 3 -->
+  <div class="email-card">
+    <div class="email-header">
+      <div class="email-meta">
+        <div class="email-label">Sample 03 / Written for Melisa Q.</div>
+        <div class="email-title">Targeting: eCommerce business with an underperforming Shopify store</div>
+      </div>
+      <div class="email-badge">Shopify Dev Outreach</div>
+    </div>
+    <div class="email-subject">
+      <strong>Subject:</strong> <span>a few things I noticed on [Store]'s site</span>
+    </div>
+    <div class="email-body">Hi [Name],
+
+I was browsing [Store Name] earlier and genuinely liked the products. A few things on the site are likely costing you sales though.
+
+Your product pages are loading slowly on mobile, the checkout flow has an unnecessary step that increases drop-off, and the above-the-fold content on the homepage doesn't immediately communicate what makes you different.
+
+Each of these is fixable. Melisa is a Shopify and Webflow specialist who builds stores that convert, not just look good. She's currently available for a new project.
+
+Would you be open to a short call this week so she can walk you through what she spotted? No obligation.
+
+Best,
+Muazzama
+On behalf of Melisa Q. | Shopify & Webflow Developer</div>
+    <div class="email-analysis">
+      <h5>Techniques Used</h5>
+      <div class="analysis-tags">
+        <span class="analysis-tag">3 specific problems identified</span>
+        <span class="analysis-tag">Compliment before critique</span>
+        <span class="analysis-tag">Scarcity signal ("currently available")</span>
+        <span class="analysis-tag">No-obligation CTA</span>
+        <span class="analysis-tag">Consultant tone, not sales tone</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- UPWORK PROFILES -->
+<section class="profiles" id="profiles">
+  <div class="section-label">Profile Management Work</div>
+  <div class="section-title">Outreach operations<br>at scale.</div>
+  <p class="section-desc">I currently manage front-end outreach, proposal strategy, and client communication for three active Upwork freelancers, each in a different Amazon niche.</p>
+
+  <div class="profiles-grid">
+    <div class="profile-card featured">
+      <div class="profile-badge">Top Rated Plus</div>
+      <div class="profile-niche">Amazon FBA & PPC</div>
+      <div class="profile-name">Asad N.</div>
+      <div class="profile-title">Amazon FBA Expert | PPC Specialist | Listing Optimization & SEO</div>
+      <div class="profile-stats">
+        <div class="profile-stat">
+          <span class="profile-stat-num">$100K+</span>
+          <span class="profile-stat-label">Total Earnings</span>
+        </div>
+        <div class="profile-stat">
+          <span class="profile-stat-num">52</span>
+          <span class="profile-stat-label">Total Jobs</span>
+        </div>
+        <div class="profile-stat">
+          <span class="profile-stat-num">100%</span>
+          <span class="profile-stat-label">Job Success</span>
+        </div>
+        <div class="profile-stat">
+          <span class="profile-stat-num">6,882</span>
+          <span class="profile-stat-label">Hours Logged</span>
+        </div>
+      </div>
+      <div class="profile-role">
+        <strong>My role:</strong> Proposal writing, outreach targeting, client communication strategy, and positioning for high-ticket B2B clients.
+      </div>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-badge">Active</div>
+      <div class="profile-niche">Amazon Design</div>
+      <div class="profile-name">Ramzan M.</div>
+      <div class="profile-title">Amazon Graphic Designer | A+ Content | Listing Images & Storefront</div>
+      <div class="profile-stats">
+        <div class="profile-stat">
+          <span class="profile-stat-num">$50K+</span>
+          <span class="profile-stat-label">Total Earnings</span>
+        </div>
+        <div class="profile-stat">
+          <span class="profile-stat-num">210</span>
+          <span class="profile-stat-label">Total Jobs</span>
+        </div>
+        <div class="profile-stat">
+          <span class="profile-stat-num">83%</span>
+          <span class="profile-stat-label">Job Success</span>
+        </div>
+        <div class="profile-stat">
+          <span class="profile-stat-num">7,759</span>
+          <span class="profile-stat-label">Hours Logged</span>
+        </div>
+      </div>
+      <div class="profile-role">
+        <strong>My role:</strong> Handled the full proposal and follow-up sequence that closed a $1,000 project with Chris P., a stalled lead converted through value-add outreach over 10 days.
+      </div>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-badge new">Growing</div>
+      <div class="profile-niche">Web Development</div>
+      <div class="profile-name">Melisa Q.</div>
+      <div class="profile-title">Shopify & Webflow Expert | CMS Development Specialist</div>
+      <div class="profile-stats">
+        <div class="profile-stat">
+          <span class="profile-stat-num">$10K+</span>
+          <span class="profile-stat-label">Total Earnings</span>
+        </div>
+        <div class="profile-stat">
+          <span class="profile-stat-num">7</span>
+          <span class="profile-stat-label">Total Jobs</span>
+        </div>
+        <div class="profile-stat">
+          <span class="profile-stat-num">3 months</span>
+          <span class="profile-stat-label">Profile Age</span>
+        </div>
+        <div class="profile-stat">
+          <span class="profile-stat-num">Active</span>
+          <span class="profile-stat-label">Pipeline Status</span>
+        </div>
+      </div>
+      <div class="profile-role">
+        <strong>My role:</strong> Building this profile from scratch: profile copy, proposal templates, niche targeting, and early-stage pipeline development for a new freelancer entering a competitive market.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINKEDIN WORK -->
+<section class="linkedin-work" id="linkedin">
+  <div class="section-label">LinkedIn & Brand Work</div>
+  <div class="section-title">Building brands<br>that attract clients.</div>
+  <p class="section-desc">Profile optimization isn't just about looking good. It's about positioning. Here's the LinkedIn infrastructure I built for Grownexus.</p>
+
+  <div class="linkedin-grid">
+    <div class="linkedin-card">
+      <div class="linkedin-card-header">
+        <h4>Grownexus: LinkedIn Profile Setup</h4>
+        <p>Amazon PPC Agency | Built from scratch</p>
+      </div>
+      <div class="linkedin-card-body">
+        <div class="linkedin-item">
+          <div class="linkedin-dot"></div>
+          <p><strong>Core Positioning:</strong> "We help Amazon brands stop bleeding ad spend and scale profitably", written to speak directly to the pain point of the ideal client.</p>
+        </div>
+        <div class="linkedin-item">
+          <div class="linkedin-dot"></div>
+          <p><strong>Banner Copywriting:</strong> Designed banner messaging with proof-based stats and a clear value proposition visible within 3 seconds of landing on the profile.</p>
+        </div>
+        <div class="linkedin-item">
+          <div class="linkedin-dot"></div>
+          <p><strong>Credibility Architecture:</strong> Built out social proof elements, metrics, and client result stats to establish trust before any outreach begins.</p>
+        </div>
+        <div class="linkedin-item">
+          <div class="linkedin-dot"></div>
+          <p><strong>Headline & About Section:</strong> Wrote keyword-optimized, benefit-driven copy that positions the agency as a specialist, not a generalist.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="linkedin-card">
+      <div class="linkedin-card-header">
+        <h4>Outreach Infrastructure</h4>
+        <p>Email signatures + DM sequences + follow-up templates</p>
+      </div>
+      <div class="linkedin-card-body">
+        <div class="linkedin-item">
+          <div class="linkedin-dot"></div>
+          <p><strong>Email Signature Variants:</strong> Created two versions: one for cold outreach (authority-focused) and one for follow-ups (softer, relationship-building tone).</p>
+        </div>
+        <div class="linkedin-item">
+          <div class="linkedin-dot"></div>
+          <p><strong>LinkedIn DM Sequences:</strong> Built multi-touch DM sequences using connection request → value message → soft CTA structure tailored to Amazon brand owners.</p>
+        </div>
+        <div class="linkedin-item">
+          <div class="linkedin-dot"></div>
+          <p><strong>Loom / Video DM:</strong> Scripted personalized video outreach frameworks for warm leads to increase reply rates through pattern interruption.</p>
+        </div>
+        <div class="linkedin-item">
+          <div class="linkedin-dot"></div>
+          <p><strong>Partnership Outreach:</strong> Coordinated outreach to potential referral partners and agencies in complementary Amazon service niches.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy" id="philosophy">
+  <div class="section-label">How I Think About Outreach</div>
+  <div class="section-title">The principles behind<br>every message I send.</div>
+  <p class="section-desc">Outreach that works isn't luck. It's a system. These are the core principles I apply across every campaign, sequence, and proposal.</p>
+
+  <div class="principles-grid">
+    <div class="principle-card">
+      <div class="principle-num">01.</div>
+      <h4>Impact Before Persuasion</h4>
+      <p>Most outreach fails because it jumps straight to the pitch. You can't persuade someone who hasn't stopped to read. The first job of any message is to earn attention through specificity, pattern interruption, or genuine value.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">02.</div>
+      <h4>Value-First Always</h4>
+      <p>The best follow-up I ever sent wasn't a reminder. It was a free insight. Reciprocity is real: when you give something genuinely useful before asking, people feel compelled to respond. Every touchpoint should deliver something, not just request something.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">03.</div>
+      <h4>Specificity Builds Trust</h4>
+      <p>Generic emails get deleted. Specific emails get replies. Calling out a person's exact product, a specific problem you noticed on their listing, or a metric relevant to their niche signals that you actually did the work, and that you understand them.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">04.</div>
+      <h4>CTAs That Don't Create Friction</h4>
+      <p>A weak CTA kills a strong email. But an aggressive CTA kills it faster. The best CTAs ask for something small and easy: a reply, a 15-minute call, a yes/no. The goal of outreach is to start a conversation, not close a deal in one email.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">05.</div>
+      <h4>Patience With Purpose</h4>
+      <p>The Upwork deal I closed was 10 days in and most people would have given up. Persistence matters, but only when each follow-up adds value. Sending the same message twice is annoying. Sending a new insight is a reason to reply.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">06.</div>
+      <h4>The Close Is a Question</h4>
+      <p>I learned from studying closing frameworks that the best closes never give a yes/no option. They ask which option. "Which package works for you?" forces a decision. Applied to outreach: "Would Thursday or Friday work for a quick call?" is always stronger than "Let me know if you're interested."</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label">Let's Work Together</div>
+  <div class="section-title">Looking for a BDE who<br>actually closes?</div>
+  <p class="section-desc">I'm currently open to B2B Sales, Business Development, and remote outreach roles. Let's talk.</p>
+  <div class="contact-links">
+    <a href="mailto:majeedmuazzama@gmail.com" class="contact-btn primary">✉ Email Me</a>
+    <a href="https://www.linkedin.com/in/muazzama-majeed-a05161247/" target="_blank" class="contact-btn secondary">💼 LinkedIn</a>
+  </div>
+</section>
+
+</body>
+</html>
